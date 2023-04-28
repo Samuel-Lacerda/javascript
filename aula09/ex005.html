@@ -18,9 +18,12 @@
     <h1>iniciando estudos com DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a utilizar <strong>DOM</strong> em JavaScript.</p>
-    <div>Clieque em mim</div>
+    <div id="msg">Clique em mim</div>
     <script>
-        document.write('Olá, mundo!')
+        var p1 = window.document.getElementsByTagName('p')[1]
+        var d = window.document.getElementById('msg')
+        d.style.background = 'blue'
+        document.write('Está escrito assim: '+ p1.innerText)
     </script>
 </body>
 </html>
