@@ -20,6 +20,7 @@ section{
 }
 
 footer{
+    margin: 30px;
     text-align: center;
     font-style: italic;
 }
