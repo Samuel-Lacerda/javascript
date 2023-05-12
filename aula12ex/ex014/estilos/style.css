@@ -34,8 +34,12 @@ header{
 
 footer{
     margin-top: 20px;
+}
+
+footer > a{
     font-style: italic;
     color: white;
+    text-decoration: none;
 }
 
 #msg{
