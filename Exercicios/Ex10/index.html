@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando um JavaScript externo</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            width: 100px;
+            height: 80px;
+        }
+        #p{
+            padding: 5px;
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Usando um JavaScript externo</h1>
+
+    <input type="button" value="Ação 1" onclick="acao1()">
+    <input type="button" value="Ação 2" onclick="acao2()">
+    <input type="button" value="Ação 3" onclick="acao3()">
+    <input type="button" value="Ação 4" onclick="acao4()">
+
+    <p id="p">Aqui vou registrar suas ações com os botões de cima</p>
+
+    <div id="res"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
