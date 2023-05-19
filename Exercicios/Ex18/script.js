@@ -1,14 +1,13 @@
 var saida = document.getElementById('res')
+var numPensado = Math.floor(Math.random()*100)+1
 
 function adivinhar(){
-    var numPensado = Math.floor(Math.random()*100)+1
     var palpite = window.prompt('Qual o seu palpite?')
     if (palpite == numPensado){
-        saida.innerHTML = `Você chutou ${palpite}. <strong>Você acertou, parabéns!</strong>`
+        saida.innerHTML += `<strong>Você acertou, parabéns!</strong> Pensei no número <strong>${numPensado}</strong></p>`
     } else if (palpite < numPensado){
-        saida.innerHTML = `Você chutou ${palpite}.Meu número é <strong>MAIOR</strong>`
+        saida.innerHTML += `<p>Você chutou ${palpite}. Meu número é <strong>MAIOR</strong></p>`
     } else {
-        saida.innerHTML = `Você chutou ${palpite}.Meu número é <strong>Menor</strong>`
+        saida.innerHTML += `<p>Você chutou ${palpite}. Meu número é <strong>Menor</strong></p>`
     }
-    saida.innerHTML += `<p>O número pensado foi: <strong>${numPensado}</strong></p>`
 }
