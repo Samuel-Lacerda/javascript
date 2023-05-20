@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estações do ano</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #botão{
+            width: 150px;
+            height: 25px;
+        }
+        #itexto{
+            width: 150px;
+            height: 20px;
+        }
+        #res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descubra a estação do ano</h1>
+
+    <p><strong>Digite o mês por extenso.</strong></p>
+    <input type="text" name="texto" id="itexto" placeholder="    Informe o mês aqui">
+    <input type="button" value="Enviar" onclick="processar()" id="botão">
+
+    <div id="res">Clique no botão acima para começar.</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
