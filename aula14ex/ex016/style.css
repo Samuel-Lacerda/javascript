@@ -59,3 +59,7 @@ footer > a{
     color: white;
     font-style: italic;
 }
+
+#res{
+    padding: 10px;
+}

@@ -6,47 +6,45 @@ function contar(){
     var passo = Number(document.getElementById('passo').value)
 
     res.innerHTML = ` `
-    if (inicio == 0 && fim == 0 && passo == 0){
+
+
+    if (inicio == `` || fim == `` ){
         window.alert('Por favor, preencha todos os campos.')
-        res.innerHTML = `Preparando a contagem...`
-    } else if (fim > 0){
-        while (inicio <= fim){
-            res.innerHTML += `${inicio}`
-            inicio = inicio + passo
-            if (inicio < fim + 1){
-                res.innerHTML += ` &#10140 `
-            } else {
-                res.innerHTML += ` Fim!`
+    } 
+
+    else if (passo == `` || passo == 0){
+        window.alert('O passo não pode ser nulo, irei configura-lo para 1.')
+        passo = 1
+        if (inicio < fim){
+            for (inicio; inicio <= fim; inicio += passo){
+                res.innerHTML += `${inicio} &#10145 `
+                if (inicio == fim){
+                    res.innerHTML += `Fim!`
+                }
             }
-        }
-    } else if (fim < 0){
-        while(fim >= inicio){
-            res.innerHTML += `${inicio}`
-            inicio = inicio + passo
-            if (fim < inicio + 1){
-                res.innerHTML += ` &#10140 `
-            } else {
-                res.innerHTML += ` Fim!`
+        } 
+        else if (inicio > fim){
+            for (inicio; inicio >= fim; inicio -=passo){
+                res.innerHTML += `${inicio} &#10145 `
             }
+            res.innerHTML += `Fim!`
         }
+    }  
+
+    else if (inicio < fim){
+        for (inicio; inicio <= fim; inicio += passo){
+                res.innerHTML += `${inicio} &#10145 `
+            }
+            res.innerHTML += `Fim!`
     }
-    
-    
 
-
-
-  /*else {
-        while (inicio <= fim){
-            res.innerHTML += `${inicio}`
-            inicio = inicio + passo
-            if (inicio < fim + 1){
-                res.innerHTML += ` &#10140 `
-            } else {
-                res.innerHTML += ` Fim!`
-            }
+    else if (inicio > fim){
+        for (inicio; inicio >= fim; inicio -=passo){
+            res.innerHTML += `${inicio} &#10145 `
         }
-    }*/
-        
-    
-
+        res.innerHTML += `Fim!`
+    } 
+    else if (inicio == fim){
+        res.innerHTML = `${inicio} &#10145 Fim!`
+    }
 }
