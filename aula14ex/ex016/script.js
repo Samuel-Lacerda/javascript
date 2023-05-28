@@ -18,10 +18,8 @@ function contar(){
         if (inicio < fim){
             for (inicio; inicio <= fim; inicio += passo){
                 res.innerHTML += `${inicio} &#10145 `
-                if (inicio == fim){
-                    res.innerHTML += `Fim!`
-                }
             }
+            res.innerHTML += `Fim!`
         } 
         else if (inicio > fim){
             for (inicio; inicio >= fim; inicio -=passo){
