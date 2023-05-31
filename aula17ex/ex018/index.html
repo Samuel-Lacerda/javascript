@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br
+">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Números</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+    
+    <section id="container">
+        <div id="inputs">
+
+            <label for="num">Número (entre 1 e 100):</label>
+            <input type="number" name="selnum" id="num" placeholder="Digite um número">
+            <input type="submit" value="Adicionar" onclick="adicionar()">
+         
+        </div>
+        <div>
+
+            <select name="tabuada" id="lista" size="10">
+                
+            </select>
+        </div>
+        <input type="submit" value="Finalizar" id="finalizar" onclick="finalizar()">
+
+        <div id="res">
+            
+        </div>
+    </section>
+
+    <footer>
+        <a href="https://github.com/Samuel-Lacerda" target="_blank">&copy; Samuel Lacerda</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
